@@ -39,6 +39,13 @@ namespace Maze.Tests
             Assert.True(robot.hcfCalled);
         }
 
+        [Fact]
+        public void SingleField()
+        {
+            var robot = MoveToExit(Mazes.SingleField, Mazes.SingleFieldStart, Mazes.SingleFieldEnd);
+            Assert.True(robot.hcfCalled);
+        }
+
         private void MoveAndCheckPosition(string mazeString, (int y, int x) start, (int y, int x) end)
         {
             var robot = MoveToExit(mazeString, start, end);

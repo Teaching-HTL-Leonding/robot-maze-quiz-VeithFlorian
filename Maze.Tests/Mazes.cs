@@ -51,6 +51,11 @@ namespace Maze.Tests
         public static readonly (int y, int x) NoSolutionStart = (0, 0);
         public static readonly (int y, int x) NoSolutionEnd = (0, 2);
 
+        public const string SingleField = @" ";
+        public static readonly (int y, int x) SingleFieldStart = (0, 0);
+        public static readonly (int y, int x) SingleFieldEnd = (0, 0);
+
+
         public static BitArray MazeFromString(string source) => new BitArray(source.Select(c => c != ' ').ToArray());
     }
 }
